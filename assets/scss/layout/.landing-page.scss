@@ -90,9 +90,13 @@
       border-radius: 1rem;
     }
   }
-
+  
   &__features-grid {
     grid-area: 3/2;
+    display: grid;
+    grid-gap: 4rem;
+    margin: 4rem 0;
+    align-items: flex-start;
     
     @include a.breakpoint(medium) {
       grid-template: 1fr 1fr / 1fr 1fr;
@@ -101,12 +105,6 @@
     @include a.breakpoint(large) {
       grid-template: 1fr / 1fr 1fr 1fr 1fr;
     }
-  }
-  
-  &__features-grid {
-    display: grid;
-    grid-gap: 4rem;
-    margin: 4rem 0;
   }
   
   &__feature {
