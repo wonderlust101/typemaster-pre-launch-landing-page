@@ -1,0 +1,131 @@
+@use '../abstract' as a;
+
+.landing-page {
+  
+  @include a.breakpoint(large) {
+    background: url('../images/shared/pattern-square.svg') no-repeat top right -11rem, url('../images/shared/pattern-square.svg') no-repeat top 43% left -11rem;
+  }
+  
+  &__info {
+    grid-area: 2/1 / 2/3;
+    display: grid;
+    row-gap: 4.5rem;
+    margin: 2rem 0;
+    
+    @include a.breakpoint(medium) {
+      grid-area: 2/2 ;
+      grid-template-columns: unset;
+    }
+    
+    @include a.breakpoint(large) {
+      grid-template-columns: 60% 1fr;
+      gap: 8rem;
+    }
+  }
+
+  &__info-image-flex {
+    grid-area: 1/1 / 1/3;
+    display: flex;
+    gap: 1.5rem;
+    
+    @include a.breakpoint(medium) {
+      grid-area: 1/2;
+    }
+
+    @include a.breakpoint(large) {
+      grid-area: 1/1;
+    }
+  }
+  
+  &__info-text {
+    grid-area: 2/2;
+    display: grid;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+    text-align: center;
+    
+    @include a.breakpoint(medium) {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      text-align: left;
+    }
+    
+    @include a.breakpoint(large) {
+      grid-area: 1/2;
+      flex-direction: column;
+      align-self: center;
+      gap: 1.5rem;
+    }
+  }
+  
+  &__info-picture {
+    &--narrow {
+      position: relative;
+      
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--clr-orange-500);
+        mix-blend-mode: multiply;
+        border-radius: 1rem;
+      }
+    }
+  }
+  
+  &__info-image {
+    &--narrow {
+      border-radius: 0 1rem 1rem 0;
+      
+      @include a.breakpoint(medium) {
+        border-radius: 1rem;
+      }
+    }
+    
+    &--wide {
+      border-radius: 1rem;
+    }
+  }
+
+  &__features-grid {
+    grid-area: 3/2;
+    
+    @include a.breakpoint(medium) {
+      grid-template: 1fr 1fr / 1fr 1fr;
+    }
+
+    @include a.breakpoint(large) {
+      grid-template: 1fr / 1fr 1fr 1fr 1fr;
+    }
+  }
+  
+  &__features-grid {
+    display: grid;
+    grid-gap: 4rem;
+    margin: 4rem 0;
+  }
+  
+  &__feature {
+    display: grid;
+    justify-items: center;
+    gap: 3rem;
+    
+    @include a.breakpoint(medium) {
+      justify-items: flex-start;
+    }
+  }
+  
+  &__feature-text {
+    display: grid;
+    gap: 1.5rem;
+    text-align: center;
+    
+    @include a.breakpoint(medium) {
+      text-align: left;
+    }
+  }
+}

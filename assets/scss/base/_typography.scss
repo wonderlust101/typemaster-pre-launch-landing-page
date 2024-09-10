@@ -1,6 +1,48 @@
 @use '../abstract' as a;
 
 h1, h2, h3, h4,
-h5, h6, p {
+h5, h6, p, a {
+  font-family: 'Barlow', sans-serif;
+}
 
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--clr-blue-900);
+  
+  @include a.breakpoint(large) {
+    font-size: 3.5rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 2.25rem;
+  text-transform: uppercase;
+  color: var(--clr-blue-900);
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1.75rem;
+  text-transform: uppercase;
+  color: var(--clr-blue-900);
+}
+
+p {
+  font-weight: 500;
+  line-height: 1.625rem;
+  color: var(--clr-blue-300);
+}
+
+a {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
 }

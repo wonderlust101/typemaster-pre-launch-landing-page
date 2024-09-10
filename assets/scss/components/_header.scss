@@ -1,0 +1,13 @@
+@use '../abstract' as a;
+
+.header {
+  grid-area: 1/2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0 4rem;
+  
+ @include a.breakpoint(medium) {
+   padding: 1.5rem 0 5rem;
+ }
+}

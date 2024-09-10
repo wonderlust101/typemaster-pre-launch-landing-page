@@ -1,0 +1,35 @@
+@use '../abstract' as a;
+
+.button {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.15s;
+  
+  @include a.breakpoint(medium) {
+    padding: 1rem 1.75rem;
+  }
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+  
+  &--grey {
+    color: var(--clr-blue-900);
+    background-color: var(--clr-grey-500);
+
+    &:hover {
+      color: var(--clr-white);
+      background-color: var(--clr-blue-900);
+    }
+  }
+  
+  &--orange {
+    color: var(--clr-white);
+    background-color: var(--clr-orange-500);
+    
+    &:hover {
+      background-color: var(--clr-orange-400);
+    }
+  }
+}
