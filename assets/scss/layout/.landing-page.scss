@@ -3,7 +3,7 @@
 .landing-page {
   
   @include a.breakpoint(large) {
-    background: url('../images/shared/pattern-square.svg') no-repeat top right -11rem, url('../images/shared/pattern-square.svg') no-repeat top 43% left -11rem;
+    background: url('../images/shared/pattern-square.svg') no-repeat top right -8rem, url('../images/shared/pattern-square.svg') no-repeat top 43% left -8rem;
   }
   
   &__info {

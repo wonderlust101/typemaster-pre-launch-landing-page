@@ -2,14 +2,14 @@
 
 .grid-bleed {
   display: grid;
-  grid-template-columns: 1fr calc(100% - 1.5rem) 1fr;
+  grid-template-columns: 1fr calc(100% - 2rem) 1fr;
   overflow: hidden;
 
   @include a.breakpoint(medium) {
     grid-template-columns: 1fr calc(100% - 2.5rem) 1fr;
   }
 
-  @include a.breakpoint(medium) {
-    grid-template-columns: 1fr min(100% - 12rem, 120rem) 1fr;
+  @include a.breakpoint(large) {
+    grid-template-columns: 1fr min(100% - 20rem, 120rem) 1fr;
   }
 }
